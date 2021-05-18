@@ -3,7 +3,6 @@ Class Genetico{
     public $qtdGenes       = 1;
     public $qtdIndividuos  = 1;
 
-
     //INDIVIDUOS
     /** Descrever */
     function individuos($qtdGenes){
@@ -47,15 +46,25 @@ Class Genetico{
 
     //MEDIA_FITNESS
     /** Descrever */
-
-
-    //$populacao = populacao($qtdIndividuos, $qtdGenes);
-
-    //var_dump($fi);
-
-    //$f = fitness($qtdIndividuos, $qtdGenes);
-
-    //print_r($f);
-
+    public function media_fitness($qtdIndividuos, $qtdGenes, $destino)
+    {
+        for($x = 1;$x <= $qtdIndividuos; $x++){
+            //$somatoria = array_reduce(Genetico::fitness($x, $qtdGenes, $destino));
+        }
+        //return $somatoria / (length($qtdIndividuos) * 1.0);
+    }
 }
+
+
+
+$qtdGenes       = 1;
+$qtdIndividuos  = 1;
+
+$populacao = Genetico::populacao($qtdIndividuos, $qtdGenes);
+
+var_dump($populacao);
+
+//$f = Genetico::fitness($qtdIndividuos, $qtdGenes);
+
+//print_r($f);
 ?>
